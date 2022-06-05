@@ -6,3 +6,5 @@
 - [Home Page](https://kodekloud.com/courses/linux-challenges/)
 
 ## Challenges:
+
+- [01 - lvm storage](./challenge-01-lvm/README.md)
