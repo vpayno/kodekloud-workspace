@@ -8,3 +8,4 @@
 ## Challenges:
 
 - [01 - lvm storage](./challenge-01-lvm/README.md)
+- [02 - nginx with goapp](./challenge-02-nginx_goapp/README.md)
