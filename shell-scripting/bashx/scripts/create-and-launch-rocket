@@ -1,25 +1,16 @@
 #!/bin/bash
 
-PATH="$(pwd)/commands:${PATH}"
-export PATH
+# the test is looking for $1
+mission_name="$1"
 
-declare mission="${1:-dryrun-mission}"
+mkdir "${mission_name}"
 
-main()
-{
-	local mission="${1-dryrun-mission}"
+rocket-add "${mission_name}"
 
-	mkdir -pv "${mission}"
+rocket-start-power "${mission_name}"
+rocket-internal-power "${mission_name}"
+rocket-start-sequence "${mission_name}"
+rocket-start-engine "${mission_name}"
+rocket-lift-off "${mission_name}"
 
-	rocket-add "${mission}"
-
-	rocket-start-power "${mission}"
-	rocket-internal-power "${mission}"
-	rocket-start-sequence "${mission}"
-	rocket-start-engine "${mission}"
-	rocket-lift-off "${mission}"
-
-	rocket-status "${mission}"
-} # main()
-
-main "${mission}" |& tee "${mission}.txt"
+rocket-status "${mission_name}"
