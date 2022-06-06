@@ -16,5 +16,5 @@ the Check button to validate your work.
 
 ## Files
 
-[Steps](steps.md)
-[Steps with Output](output.md)
+- [Step Overview](steps.md)
+- [Steps with Output](output.md)
