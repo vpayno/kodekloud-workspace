@@ -14,3 +14,7 @@ disks on this server.
 Inspect the requirements in detail by clicking on the icons of the interactive
 architecture diagram on the right and complete the tasks. Once done click on
 the Check button to validate your work.
+
+## Files
+
+- [Commands](commands.md)
