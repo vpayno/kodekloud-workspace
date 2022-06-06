@@ -1,0 +1,25 @@
+#!/bin/bash
+
+PATH="$(pwd)/commands:${PATH}"
+export PATH
+
+declare mission="${1:-dryrun-mission}"
+
+main()
+{
+	local mission="${1-dryrun-mission}"
+
+	mkdir -pv "${mission}"
+
+	rocket-add "${mission}"
+
+	rocket-start-power "${mission}"
+	rocket-internal-power "${mission}"
+	rocket-start-sequence "${mission}"
+	rocket-start-engine "${mission}"
+	rocket-lift-off "${mission}"
+
+	rocket-status "${mission}"
+} # main()
+
+main "${mission}" |& tee "${mission}.txt"
