@@ -117,7 +117,7 @@ rocket-lift-off () {
   set-status "launching"
   if [ $show_animation = "true" ]
   then
-    cat /usr/local/bin/rocket.vt | pv -qL 500 && clear
+    cat ./resources/rocket.vt | pv -qL 500 && clear
   fi
   rocket-lift-off-sequence > /dev/null &
   # rocket-lift-off-sequence &
