@@ -18,3 +18,5 @@ the Check button to validate your work.
 ## Files
 
 - [Commands](commands.md)
+- [Lunar Mission](lunar-mission.md)
+- [Mars Mission](mars-mission.md)
