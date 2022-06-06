@@ -1,1 +1,3 @@
-rocket start-engine $1
+#!/bin/bash
+
+rocket start-engine "${1}"

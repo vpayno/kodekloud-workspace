@@ -1,1 +1,3 @@
-rocket add $1
+#!/bin/bash
+
+rocket add "$1"

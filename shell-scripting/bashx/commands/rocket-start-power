@@ -1,1 +1,3 @@
-rocket start-power $1
+#!/bin/bash
+
+rocket start-power "${1}"

@@ -1,1 +1,3 @@
-rocket status $1
+#!/bin/bash
+
+rocket status "${1}"
