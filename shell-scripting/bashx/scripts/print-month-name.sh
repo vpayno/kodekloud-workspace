@@ -1,14 +1,55 @@
 #!/bin/bash
 
-declare -i month_num=$1
-month_name
+month_number=$1
 
-if [[ ${month_num} -eq 0 ]]; then
-        printf "No month number given\n"
-
-elif [[ ${month_num} -le 12 ]]; then
-        month_name="$(date -d "${month_num}/1/1" +%B)"
-        printf "%s\n" "${month_name}"
-elif [[ ${month_num} -lt 0 ]] || [[ ${month_num} -gt 12 ]]; then
-        printf "Invalid month number given\n"
+if [ -z $month_number ]
+then
+  echo "No month number given. Please enter a month number as a command line argument."
+  echo "eg: ./print-month-number 5"
+  exit
 fi
+
+if [[ $month_number -lt 1 && $month_number -gt 12 ]]
+then
+  echo "Invalid month number given. Please enter a valid number - 1 to 12."
+  exit
+fi
+
+case "${month_number}" in
+        1)
+          echo "January"
+          ;;
+        2)
+          echo "February"
+          ;;
+        3)
+          echo "March"
+          ;;
+        4)
+          echo "April"
+          ;;
+        5)
+          echo "May"
+          ;;
+        6)
+          echo "June"
+          ;;
+        7)
+          echo "July"
+          ;;
+        8)
+          echo "August"
+          ;;
+        9)
+          echo "September"
+          ;;
+        10)
+          echo "October"
+          ;;
+        11)
+          echo "November"
+          ;;
+        12)
+          echo "December"
+          ;;
+esac
