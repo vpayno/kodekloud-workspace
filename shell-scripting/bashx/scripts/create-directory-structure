@@ -1,0 +1,18 @@
+#!/bin/bash
+
+declare capital
+declare country
+
+declare -A capitals=(
+	[USA]="Washington, D.C."
+	[UK]="London"
+	[India]="New Delhi"
+)
+
+for country in "${!capitals[@]}"; do
+	mkdir -pv countries/"${country}"
+	capital="${capitals[${country}]}"
+	printf "%s\n" "${capital}" > countries/"${country}"/capital.txt
+done
+
+uptime

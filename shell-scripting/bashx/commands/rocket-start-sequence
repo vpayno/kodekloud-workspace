@@ -1,0 +1,3 @@
+#!/bin/bash
+
+rocket start-sequence "${1}"

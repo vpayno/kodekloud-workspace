@@ -1,0 +1,3 @@
+#!/bin/bash
+
+rocket internal-power "${1}"

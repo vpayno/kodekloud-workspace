@@ -1,0 +1,33 @@
+#!/bin/bash
+
+print_color() {
+
+  RED='\033[0;31m'
+  GREEN='\033[0;32m'
+  NC='\033[0m' # No Color
+
+  case "${1}" in
+    red)   COLOR=$RED ;;
+    green) COLOR=$GREEN ;;
+  esac
+
+  # shellcheck disable=SC2059
+  printf "${COLOR}$2${NC}"
+}
+
+declare -a mission_names
+
+mapfile -t mission_names < <(find . -type f -name status | awk -F/ '{ print $2 }')
+
+print_color green "\n--------------------------------------------"
+print_color green "\n          ROCKET MISSIONS           "
+print_color green "\n--------------------------------------------\n"
+print_color white "  Name \t\t\t Status"
+print_color green "\n--------------------------------------------\n"
+
+for mission_name in "${mission_names[@]}"; do
+  mission_status="$(cat "${mission_name}"/status)"
+  printf "%s \t\t %s\n" "${mission_name}" "${mission_status}"
+done
+
+print_color green "\n          Total Missions - $(echo "${mission_names[@]}" | grep '[^ ]' | wc -w)\n"
