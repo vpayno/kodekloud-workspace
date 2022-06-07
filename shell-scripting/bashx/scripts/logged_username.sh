@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo "My name is ${USER}"
+printf "My name is %s\n" "${USER}"

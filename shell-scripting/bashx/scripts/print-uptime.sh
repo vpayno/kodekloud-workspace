@@ -1,5 +1,5 @@
 #!/bin/bash
 
-up_time=$(uptime)
+up_time="$(uptime)"
 
-echo "The uptime of the system is $up_time"
+printf "The uptime of the system is %s\n" "${up_time}"

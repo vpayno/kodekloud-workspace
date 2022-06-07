@@ -1,3 +1,5 @@
+#!/bin/bash
+
 mkdir lunar-mission
 
 rocket-add lunar-mission

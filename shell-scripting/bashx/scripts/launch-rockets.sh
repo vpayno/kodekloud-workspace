@@ -8,6 +8,6 @@ declare mission
 mapfile -t missions < "${input_file}"
 
 for mission in "${missions[@]}"; do
-        bash create-and-launch-rocket "${mission}"
-        printf "\n"
+	bash create-and-launch-rocket "${mission}"
+	printf "\n"
 done
