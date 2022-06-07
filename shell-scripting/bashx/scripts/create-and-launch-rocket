@@ -16,6 +16,11 @@ rocket_status=$(rocket-status $mission_name)
 
 echo "The status of launch is $rocket_status"
 
-if [[ ${rocket_status} == failed ]]; then
-        rocket-debug "${mission_name}"
+while [ $(rocket-status $mission_name) == launching ]; do
+        sleep 1
+done
+
+if [ $rocket_status = "failed" ]
+then
+  rocket-debug
 fi
