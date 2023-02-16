@@ -1,0 +1,6 @@
+[submodule "docker/example-voting-app"]
+	path = docker/example-voting-app
+	url = https://github.com/dockersamples/example-voting-app
+[submodule "docker/docker-swarm-visualizer"]
+	path = docker/docker-swarm-visualizer
+	url = https://github.com/dockersamples/docker-swarm-visualizer
