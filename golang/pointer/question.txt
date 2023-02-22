@@ -1,0 +1,9 @@
+How do you create and initialize a pointer in Go?
+
+	var p = &int(5)
+
+	var p **int = i*
+
+	p := new(int)*
+
+	p := &i*    <--- ????

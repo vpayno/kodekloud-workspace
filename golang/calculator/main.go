@@ -1,3 +1,17 @@
+/*
+	In this question, we are building a simple calculator that can perform addition, subtraction, multiplication, and division operations.
+
+	Complete the code in the function calculate to return a slice consisting of 4 elements
+		[ sum of a and b, difference of a and b, product of a and b, quotient on dividing a by b]
+
+	A Go file is located at /root/code/calculator/ directory.
+
+	Expected Output:
+
+		[30 10 200 2]
+		[770 630 49000 10]
+*/
+
 package main
 
 import "fmt"
